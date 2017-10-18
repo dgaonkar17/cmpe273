@@ -14,11 +14,8 @@ def upload_file():
 	db = rocksdb.DB("mydb.db", rocksdb.Options(create_if_missing=True))
 	key = uuid.uuid4().hex
 	db.put(key.encode('utf-8'),f.stream.read().encode('utf-8'))
+	return 'script:-d:'+key, 201
 
-	return key, 201
-
-
-# To execute python script foo.py, playing with console output
 @contextlib.contextmanager
 def stdoutIO(stdout=None):
     old = sys.stdout
@@ -36,7 +33,7 @@ def retrieve_file(scriptid=None):
 	value = db.get(scriptid.encode('utf-8'))
 
 	with stdoutIO() as s:
-		exec value
+		exec(value)
 
 	return s.getvalue()
 
