@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from flask import Flask, request
+from flask import Flask, request,jsonify, json
 import rocksdb
 import uuid
 import sys
@@ -14,7 +14,7 @@ def upload_file():
 	db = rocksdb.DB("mydb.db", rocksdb.Options(create_if_missing=True))
 	key = uuid.uuid4().hex
 	db.put(key.encode('utf-8'),f.stream.read().encode('utf-8'))
-	return 'script:-d:'+key, 201
+	  return jsonify(scriptid=key),201
 
 @contextlib.contextmanager
 def stdoutIO(stdout=None):
