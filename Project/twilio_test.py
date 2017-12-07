@@ -2,9 +2,9 @@ from twilio.rest import Client
 
 class twilio_test:
     # Your Account SID from twilio.com/console
-    account_sid = "AC7e7981de6883ae957dc443a111206ff0"
+    account_sid = config.twilio_sid
     # Your Auth Token from twilio.com/console
-    auth_token  = "d6cb557395c49e119d8e2e9f72cd5d07"
+    auth_token  = config.twilio_token
     client = Client(account_sid, auth_token)
 
     def send_msg(self,body,phone):
