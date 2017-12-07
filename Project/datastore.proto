@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message Request {
+    string bookingid = 1;
+    string username= 2;
+    string phoneno= 3;
+    string checkindate= 4;
+    string noofdays = 5;
+    string roomtype= 6;
+    string price = 7;
+    string roomno = 8;
+    string oprtype = 9;
+}
+
+message Response {
+    string data = 1;
+}
+
+service Datastore {
+   rpc put(Request) returns (Response) {}
+   rpc get(Request) returns (Response) {}
+}

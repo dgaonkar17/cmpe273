@@ -1,0 +1,25 @@
+
+DROP DATABASE if exists `chatbot_db`;
+
+CREATE DATABASE `chatbot_db`;
+
+
+DROP TABLE IF EXISTS `chatbot_db`.`userdata` ;
+
+CREATE TABLE `chatbot_db`.`userdata` (
+    `bookingid` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50),
+    `phoneno` VARCHAR(30),
+    `checkindate` VARCHAR(30),
+    `noofdays` INT,
+	`roomtype` VARCHAR(20),
+	`price` INT,
+	PRIMARY KEY (`bookingid`)
+);
+
+DROP TABLE IF EXISTS `chatbot_db`.`Room_Association`;
+
+CREATE TABLE `chatbot_db`.`Room_Association` (
+    `bookingid` INT NOT NULL,
+    `roomno` INT NOT NULL
+    )
