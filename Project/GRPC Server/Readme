@@ -1,0 +1,1 @@
+This is GRPC Server file which is invoked by master database for replication. The slave database in GRPC Server stores all the data received via requests.
