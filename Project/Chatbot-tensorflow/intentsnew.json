@@ -1,0 +1,86 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": "",
+          "context_filter":""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "hours",
+         "patterns": ["What is the checkin time?", "What is the checkout time?", "Checkin", "Checkout" ],
+         "responses": ["We have 24 hours checkin and checkout time", "You can checkin and checkout at any time of the day"]
+        },
+        {"tag": "payments",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+         "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+        },
+
+        {"tag": "rooms",
+         "patterns": ["What kind of rooms are available?", "Types of rooms?","I want to book a room?" ],
+         "responses": ["SpartanHotels provide customers with Basic, Deluxe and Premium rooms each with four occupancy", "We have Basic, Deluxe, Premium rooms available each with four occupancy"],
+          "context_set":"bookingtype"
+        },
+        {
+          "tag":"roomcategorybasic",
+          "patterns":["I need a basic room","Basic room","Give me a basic room"],
+          "responses":["Sure! Our basic room costs $100/day. How many rooms do you want to book?","The cost of basic room is $100/day. Please provide the number of rooms you would like?"],
+
+          "context_filter":"bookingtype"
+
+
+        },
+        {"tag":"roomcategorydeluxe",
+          "patterns":["I need a deluxe room","Deluxe room","Give me a deluxe room"],
+          "responses":["Sure! Our deluxe room costs $300/day. How many rooms do you want to book?","The cost of deluxe room is $300/day. Please provide the number of rooms you would like?"],
+
+          "context_filter":"bookingtype"
+        },
+        {"tag":"roomcategorypremium",
+          "patterns":["I need a premium room","Premium room","Give me a premium room"],
+          "responses":["Sure! Our deluxe room costs $1000/day. How many rooms do you want to book?","The cost of premium room is $1000/day. Please provide the number of rooms you would like?"],
+
+          "context_filter":"bookingtype"
+        },
+        {"tag":"thenoofbookings",
+          "patterns":["I need 1 room","I need 2 rooms","I need 3 rooms","I need 4 rooms","I need 5 rooms","I need 6 rooms","I need 7 rooms","I need 8 rooms","I need 9 rooms","I need 10 rooms"],
+          "responses":["Okay. What shall be your check-in date?","Sure, please tell me your check-in dates."],
+
+          "context_filter":"bookingtype"
+
+
+        },
+        {"tag":"fromthisdate",
+          "patterns":["My check-in date is "," is my check-in date","I want to check-in on ", "I would like to check-in on"],
+          "responses":["Sounds good. Please tell me the number of days you will stay.","Sure, how many days would you like to stay in our hotel?"],
+
+          "context_filter":"bookingtype"
+        },
+        {"tag":"noofdays",
+          "patterns":["I would like to stay for x days "," My stay is for x days","I am staying for x days","x days","I will stay for x days"],
+          "responses":["Okay. Can you please tell me your name?","Sure, I would like to know your name."],
+
+          "context_filter":"bookingtype"
+        },
+        {"tag":"clientname",
+          "patterns":["name's x","x is my name"],
+          "responses":["Okay. please provide your phone number.","Sure, give me your phone number."],
+
+          "context_filter":"bookingtype"
+        },
+        {"tag":"clientphone",
+          "patterns":["My phone number is 123546879 ","123456789 is my phone number","Its 123456879"],
+          "responses":["Okay. I am assigning you Room No. 5 from date dd/mm/yyyy. Your booking id is SB001","Sure. You are booked for Room No. x from date dd/mm/yyyy. Your booking id is SB001"],
+          "context_filter":"bookingtype"
+        }
+
+
+
+   ]
+}

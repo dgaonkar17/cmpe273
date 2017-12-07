@@ -1,0 +1,57 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "hours",
+         "patterns": ["What is the checkin time?", "What is the checkout time?", "Checkin", "Checkout" ],
+         "responses": ["We have 24 hours checkin and checkout time", "You can checkin and checkout at any time of the day"]
+        },
+
+        {"tag":"roomcategorydeluxe",
+          "patterns":["I need a deluxe room","Deluxe room","Give me a deluxe room"],
+          "responses":["Sure! Our deluxe room costs $300/day. How many rooms do you want to book?","The cost of deluxe room is $300/day. Please provide the number of rooms you would like?"],
+          "context_set":"roomtype",
+          "context_filter":"noofbookings"
+        },
+        {"tag":"roomcategorypremium",
+          "patterns":["I need a premium room","Premium room","Give me a premium room"],
+          "responses":["Sure! Our deluxe room costs $1000/day. How many rooms do you want to book?","The cost of premium room is $1000/day. Please provide the number of rooms you would like?"],
+          "context_set":"roomtype",
+          "context_filter":"noofbookings"
+        },
+        {"tag":"noofbookings",
+          "patterns":["I need 1 room","I need 2 rooms","I need 3 rooms","I need 4 rooms","I need 5 rooms","I need 6 rooms","I need 7 rooms","I need 8 rooms","I need 9 rooms","I need 10 rooms"],
+          "responses":["Okay. Your booking is done.","Sure, you have everything good to go."],
+          "context_set":"roomtype",
+          "context_filter":"noofbookings"
+        },
+        {"tag": "payments",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+         "responses": ["Ofcourse,we accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+        },
+        {"tag": "opentoday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "rooms",
+         "patterns": ["What kind of rooms are available?", "Types of rooms?","I want to book a room?" ],
+         "responses": ["SpartanHotels provide customers with Basic, Deluxe and Premium rooms each with four occupancy", "We have Basic, Deluxe, Premium rooms available each with four occupancy"],
+         "context_set": "rentalday"
+        },
+        {"tag": "basic",
+         "patterns":["I need a basic room","Basic room","Give me a basic room"],
+         "responses":["Sure! Our basic room costs $100/day. How many rooms do you want to book?","The cost of basic room is $100/day. Please provide the number of rooms you would like?"],
+         "context_filter": "rentalday"
+        }
+   ]
+}
