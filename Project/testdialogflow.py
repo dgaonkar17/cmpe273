@@ -29,16 +29,15 @@ except ImportError:
     import apiai
 
 
-# demo agent acess token: e5dc21cab6df451c866bf5efacb40178
 
-#CLIENT_ACCESS_TOKEN = '5b86bb9165b44123bde2d0c2bd6f78f1'
-CLIENT_ACCESS_TOKEN='75f0ed3b81cd46099c29e1221a5bdd85'
 
-#CLIENT_ACCESS_TOKEN = '1a8f453b5fa8410bb0c01a2cacf53a4b'
+CLIENT_ACCESS_TOKEN=config.dialogflow_token
+
+
 
 VALET_SLACK_NAME = 'demobot'
-VALET_SLACK_TOKEN = 'xoxb-280694073410-gfcFGCJt4vbUTkucP0zXWlAX'
-VALET_SLACK_ID = 'U88LE25C2'
+VALET_SLACK_TOKEN = config.slack_token
+VALET_SLACK_ID = config.slack_id
 valet_slack_client = slackclient.SlackClient(VALET_SLACK_TOKEN)
 ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
 
