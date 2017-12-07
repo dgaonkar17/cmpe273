@@ -15,11 +15,9 @@ with open('intents.json') as json_data:
 SOCKET_DELAY = 1
 # slackbot environment variables
 VALET_SLACK_NAME = 'demobot'
-VALET_SLACK_TOKEN = 'xoxb-280694073410-gfcFGCJt4vbUTkucP0zXWlAX'
-VALET_SLACK_ID = 'U88LE25C2'
+VALET_SLACK_TOKEN = config.slack_token
+VALET_SLACK_ID = config.slack_id
 valet_slack_client = slackclient.SlackClient(VALET_SLACK_TOKEN)
-
-
 
 
 words = []
