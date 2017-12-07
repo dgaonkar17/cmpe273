@@ -7,7 +7,7 @@ The Spartan hotel chatbot is built for providing chat assistance to customers. T
 2. Python SDK integration to api.ai 
 3. MySQL Database for storing the user and booking details.
 4. Replication to multiple servers using GRPC for distributed system.
-5. Weather script deployed on Heroku which is integrated to Dialogflow using webhook. 
+5. Weather script with flask deployed on Heroku using Yahoo Weather API integrated to Dialogflow using webhook. 
 6. Twilio service for SMS notification.
 7. Yelp API to get top recommendations of nearby restaurants. 
 
