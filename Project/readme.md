@@ -21,3 +21,35 @@ The Spartan hotel chatbot is built for providing chat assistance to customers. T
 ### Notification sent to user when a booking is made by SMS using Twilio service:
 
 ![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/booking_twilio.png)
+
+### Replication of Data while booking via GRPC on other node:
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/bookingreplicationweather.png)
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/replicationinsert.png)
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/replicationdb.png)
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/replicationdb1.png)
+
+### Booking Cancellation:
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/repdelete.png)
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/repdeldb.png)
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/repdeldb1.png)
+
+### Retrieving Booking details:
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/getdetails.png)
+
+### Heroku Integration:
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/heroku.png)
+
+### Calling Weather API integrated in Heroku talking to Yahoo Weather:
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/weather.png)
+
+
