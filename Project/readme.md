@@ -55,4 +55,8 @@ The Spartan hotel chatbot is built for providing chat assistance to customers. T
 
 ![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/weather.png)
 
+### Yelp API integration with our chatbot. It responds with the highest rated item in that category.
+
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/yelp.png)
+
 
