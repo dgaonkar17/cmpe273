@@ -40,6 +40,9 @@ The Spartan hotel chatbot is built for providing chat assistance to customers. T
 
 ![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/repdeldb1.png)
 
+### Cancellation Notification received by the user on Twilio
+![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/Canellation_twilio.PNG)
+
 ### Retrieving Booking details:
 
 ![Alt text](https://github.com/dgaonkar17/cmpe273/blob/master/Project/images/getdetails.png)
